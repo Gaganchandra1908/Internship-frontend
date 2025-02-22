@@ -59,12 +59,12 @@ const SignUp = () => {
   };
 
   return (
-    <section className="w-full min-h-screen flex items-center justify-center bg-background pl-[320px]">
-      <div className="bg-card mx-auto w-full h-auto px-4 flex flex-col gap-4 items-center py-6 justify-center rounded-md shadow-lg">
-        <h1 className="text-primary text-3xl font-bold mb-2 sm:text-4xl md:text-5xl lg:text-6xl">
+    <section className="w-full min-h-screen flex items-center justify-center bg-background">
+      <div className="bg-card w-full max-w-3xl mx-auto p-6 rounded-md shadow-lg">
+        <h1 className="text-primary text-3xl font-bold mb-6 text-center sm:text-4xl md:text-5xl">
           Register
         </h1>
-        <form className="flex flex-col gap-5 w-full" onSubmit={handleRegister}>
+        <form className="flex flex-col gap-5" onSubmit={handleRegister}>
           <p className="font-semibold text-xl md:text-2xl">Personal Details</p>
           <div className="flex flex-col gap-4 sm:flex-row">
             <div className="flex flex-col sm:flex-1">
@@ -129,11 +129,13 @@ const SignUp = () => {
               />
             </div>
           </div>
-          <div className="flex flex-col sm:flex-1 gap-2">
+          <div className="flex flex-col gap-2">
             <label className="text-base text-muted">Profile Image</label>
             <div className="flex items-center gap-3">
               <img
-                src={profileImagePreview ? profileImagePreview : "/imageHolder.jpg"}
+                src={
+                  profileImagePreview ? profileImagePreview : "/imageHolder.jpg"
+                }
                 alt="Profile Preview"
                 className="w-14 h-14 rounded-full"
               />
@@ -205,7 +207,7 @@ const SignUp = () => {
             </div>
           </div>
           <button
-            className="btn btn-primary w-[420px] lg:w-[640px] text-xl py-2 my-4 mx-auto"
+            className="btn btn-primary w-full text-xl py-2 mt-4"
             type="submit"
             disabled={loading}
           >
