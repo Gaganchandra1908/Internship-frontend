@@ -1,0 +1,97 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* 3D Logo Effect */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #ff8a00);
+  transform: rotate(5deg) scale(1.1);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafb);
+  transform: rotate(-5deg) scale(1.1);
+}
+
+/* Animated Card */
+.card {
+  padding: 2em;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #ffffff, #f3f3f3);
+  box-shadow: 6px 6px 12px #c8c8c8, -6px -6px 12px #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 10px 10px 20px #c8c8c8, -10px -10px 20px #ffffff;
+}
+
+/* Dark Mode for Cards */
+.dark .card {
+  background: linear-gradient(145deg, #252525, #2e2e2e);
+  box-shadow: 6px 6px 12px #191919, -6px -6px 12px #3c3c3c;
+}
+
+.dark .card:hover {
+  box-shadow: 10px 10px 20px #191919, -10px -10px 20px #3c3c3c;
+}
+
+/* Spinning Logo */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 10s linear;
+  }
+}
+
+/* Cool Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f3f3f3;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #ff8a00, #e52e71);
+  border-radius: 10px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+}
+
+/* Read the Docs Section */
+.read-the-docs {
+  color: #888;
+  font-style: italic;
+  opacity: 0.9;
+  transition: color 0.3s ease-in-out;
+}
+
+.read-the-docs:hover {
+  color: #e52e71;
+}
+
+.dark .read-the-docs:hover {
+  color: #2575fc;
+}
